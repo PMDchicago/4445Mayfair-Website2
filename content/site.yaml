@@ -1,0 +1,14 @@
+site_title: Mayfair Commons
+phone_number: 773-205-7862
+office_hours: "Mon-Fri: 9am - 5pm (Office closed on weekends)"
+address:
+  street: 4444 W Lawrence Ave
+  city: Chicago
+  state: IL
+  zip: "60630"
+marketing_knobs:
+  hero_cta_text: Schedule a Tour
+  show_banner: true
+colors:
+  primary: "#1A3C40"
+  secondary: "#E6E6E6"

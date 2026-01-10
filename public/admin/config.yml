@@ -1,0 +1,102 @@
+backend:
+  name: github
+  repo: PMDchicago/4445Mayfair-Website2
+  branch: main # Defaulting to main, can be changed if needed
+  squash_merges: true # Keep history clean
+
+
+media_folder: "public/images"
+public_folder: "/images"
+
+publish_mode: editorial_workflow
+
+collections:
+  - name: "site_metadata"
+    label: "Global Settings"
+    delete: false
+    editor:
+      preview: false
+    files:
+      - name: "settings"
+        label: "Site Settings"
+        file: "content/site.yaml"
+        fields:
+          - { label: "Site Title", name: "site_title", widget: "string" }
+          - { label: "Phone Number", name: "phone_number", widget: "string", pattern: ['^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$', "Must be a valid US phone number"] }
+          - { label: "Office Hours", name: "office_hours", widget: "string", default: "Mon-Fri: 9am - 5pm" }
+          - label: "Address"
+            name: "address"
+            widget: "object"
+            fields:
+              - { label: "Street", name: "street", widget: "string" }
+              - { label: "City", name: "city", widget: "string" }
+              - { label: "State", name: "state", widget: "string" }
+              - { label: "Zip", name: "zip", widget: "string" }
+          - label: "Marketing Knobs"
+            name: "marketing_knobs"
+            widget: "object"
+            fields:
+              - { label: "Hero CTA Text", name: "hero_cta_text", widget: "string" }
+              - { label: "Show Announcement Banner", name: "show_banner", widget: "boolean", default: false }
+          - label: "Branding Colors"
+            name: "colors"
+            widget: "object"
+            fields:
+              - { label: "Primary Color", name: "primary", widget: "color" }
+              - { label: "Secondary Color", name: "secondary", widget: "color" }
+
+  - name: "unit_types"
+    label: "Unit Types"
+    files:
+      - name: "units"
+        label: "Unit Types List"
+        file: "content/units.yaml"
+        fields:
+          - label: "Units"
+            name: "units"
+            widget: "list"
+            fields:
+              - { label: "Title", name: "title", widget: "string", hint: "e.g. Studio, 1-Bedroom" }
+              - { label: "Price Range", name: "price_range", widget: "string", hint: "e.g. $711+" }
+              - { label: "Square Footage", name: "sq_ft", widget: "number" }
+              - { label: "Availability", name: "availability", widget: "select", options: ["Available", "Waitlist", "Sold Out"], default: "Waitlist" }
+              - label: "Unit Images"
+                name: "images"
+                widget: "list"
+                field: { label: "Image", name: "image", widget: "image" }
+              - { label: "Features", name: "features", widget: "list" }
+              - { label: "Income Restricted", name: "income_restricted", widget: "boolean", default: true }
+
+  - name: "pages"
+    label: "Pages"
+    files:
+      - name: "home"
+        label: "Home Page"
+        file: "content/pages/home.md"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Hero Image", name: "hero_image", widget: "image" }
+          - { label: "Body", name: "body", widget: "markdown" }
+          - { label: "SEO Description", name: "seo_description", widget: "text", required: false }
+      - name: "neighborhood"
+        label: "Neighborhood Page"
+        file: "content/pages/neighborhood.md"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Hero Image", name: "hero_image", widget: "image" }
+          - { label: "Body", name: "body", widget: "markdown" }
+          - { label: "SEO Description", name: "seo_description", widget: "text", required: false }
+
+  - name: "gallery"
+    label: "Gallery"
+    files:
+      - name: "gallery_images"
+        label: "Gallery Images"
+        file: "content/gallery.yaml"
+        fields:
+          - label: "Images"
+            name: "images"
+            widget: "list"
+            fields:
+              - { label: "Image", name: "src", widget: "image" }
+              - { label: "Alt Text", name: "alt_text", widget: "string" }

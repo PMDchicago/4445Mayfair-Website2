@@ -1,0 +1,41 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+@theme {
+  --font-serif: var(--font-merriweather);
+  --font-sans: var(--font-inter);
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-secondary: var(--secondary);
+  --color-accent: var(--accent);
+}
+
+:root {
+  --background: #F9F7F2;
+  /* Warm Cream */
+  --foreground: #1A2C42;
+  /* Deep Navy Text */
+  --primary: #8DA399;
+  /* Soft Sage Green */
+  --secondary: #1A2C42;
+  /* Deep Navy (same as foreground for now, or distinct) */
+  --accent: #C5A065;
+  /* Warm Gold */
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--background);
+  color: var(--foreground);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-serif);
+}

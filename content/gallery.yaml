@@ -1,0 +1,7 @@
+images:
+  - src: "/images/exterior.jpg"
+    alt_text: "Exterior view of Mayfair Commons"
+  - src: "/images/lobby.jpg"
+    alt_text: "Main Lobby"
+  - src: "/images/unit-kitchen.jpg"
+    alt_text: "Typical Unit Kitchen"

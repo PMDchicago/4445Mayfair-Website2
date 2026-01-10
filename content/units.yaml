@@ -1,0 +1,44 @@
+units:
+  - title: "Studio"
+    price_range: "$711+"
+    sq_ft: 450
+    availability: "Waitlist"
+    images:
+      - "/images/unit-placeholder-1.svg"
+      - "/images/unit-placeholder-2.svg"
+      - "/images/unit-placeholder-3.svg"
+      - "/images/unit-placeholder-4.svg"
+    features:
+      - "Full Kitchen"
+      - "Bright Windows"
+      - "Emergency Pull Cord"
+    income_restricted: true
+
+  - title: "1-Bedroom"
+    price_range: "$747+"
+    sq_ft: 600
+    availability: "Waitlist"
+    images:
+      - "/images/unit-placeholder-1.svg"
+      - "/images/unit-placeholder-2.svg"
+      - "/images/unit-placeholder-3.svg"
+      - "/images/unit-placeholder-4.svg"
+    features:
+      - "Private Bedroom"
+      - "Spacious Living Area"
+      - "Ample Storage"
+    income_restricted: true
+
+  - title: "2-Bedroom"
+    price_range: "~$942+"
+    sq_ft: 800
+    availability: "Waitlist"
+    images:
+      - "/images/unit-placeholder-1.svg"
+      - "/images/unit-placeholder-2.svg"
+      - "/images/unit-placeholder-3.svg"
+      - "/images/unit-placeholder-4.svg"
+    features:
+      - "Two Bedrooms"
+      - "Great for Couples"
+    income_restricted: true
