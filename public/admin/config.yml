@@ -1,5 +1,5 @@
 backend:
-  name: github
+  name: git-gateway
   repo: PMDchicago/4445Mayfair-Website2
   branch: main # Defaulting to main, can be changed if needed
   squash_merges: true # Keep history clean
